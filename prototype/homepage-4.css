@@ -1,0 +1,375 @@
+.bookRow .image-overlay {
+    display: none !important;
+    opacity: 0 !important;
+  }
+  
+  .svg-logo {
+    fill: white;
+  }
+  
+  .header__wrapper {
+    background-color: transparent;
+  }
+  
+  .o-container.header__content > * {
+    fill: white;
+  }
+  
+  .svg-icons-magnifying-glass {
+    fill: white;
+  }
+  
+  .svg-social-twitter > * {
+    fill: white;
+  }
+  
+  .socials__item {
+    fill: white;
+  }
+  
+  .nav__items {
+    display: none;
+  }
+  
+  .c-header {
+    width: 100px;
+  }
+  
+  .o-container.header__content {
+    background-color: transparent;
+  }
+  
+  .nav__content {
+    background-color: transparent;
+  }
+  
+  .c-nav {
+    width: 100px;
+  }
+  
+  .c-header {
+    z-index: 999;
+  }
+  
+  body {
+    overflow: overlay;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  .shelf {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+  }
+  
+  .books {
+    white-space: nowrap;
+  }
+  
+  .bookRow {
+    scroll-snap-points-y: repeat(100vh);
+    scroll-snap-type: y proximity;
+    position: relative;
+    transform-origin: center;
+    display: inline-block;
+    transition: width 1s, filter 1s;
+    cursor: pointer;
+    filter: brightness(100%);
+    overflow: scroll;
+    width: 250px;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: overlay;
+  }
+  
+  .bookRow:hover {
+    filter: brightness(100%);
+  }
+  
+  .bookRow:hover > * > * {
+    display: block;
+  }
+  
+  .book {
+    scroll-snap-align: start;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+  }
+  
+  .bookImage {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    filter: grayscale(100%);
+    transition: filter 1s;
+  }
+  
+  .bookColor {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: multiply;
+    transition: opacity 1s;
+  }
+  
+  .bookTitle {
+    display: none;
+    transition: display 1s;
+    padding: 25px;
+    padding-bottom: 0px;
+    color: white;
+    text-transform: uppercase;
+    position: absolute;
+    width: 250px;
+    bottom: 140px;
+    max-height: 300px;
+    white-space: pre-wrap;
+    font-weight: bold;
+    font-size: 150%;
+    line-height: 140%;
+    text-overflow: ellipsis;
+    /* white-space: wrap; */
+    overflow: hidden;
+  }
+  
+  .bookType {
+    display: none;
+    transition: display 1s;
+    padding: 25px;
+    color: white;
+    text-transform: uppercase;
+    width: 250px;
+    bottom: 40px;
+    position: absolute;
+    font-weight: lighter;
+    height: 110px;
+    font-size: 120%;
+  }
+  
+  .bookTime {
+    display: none;
+    transition: display 1s;
+    padding: 25px;
+    color: white;
+    text-transform: uppercase;
+    position: absolute;
+    width: 250px;
+    bottom: 40px;
+    font-weight: lighter;
+    height: 80px;
+    font-size: 120%;
+  }
+  
+  .options {
+    background-color: white;
+    z-index: 1;
+    position: fixed;
+    bottom: 25px;
+    right: -300px;
+    padding: 25px;
+    padding-left: 38px;
+    display: grid;
+    grid-template-columns: auto auto;
+    transition: right 1s;
+    font-weight: bold;
+    width: 213px;
+  }
+  
+  .toggle {
+    border-radius: 50%;
+    position: relative;
+    top: 0.3em;
+    right: 0.5em;
+    width: 1em;
+    height: 1em;
+    border-style: solid;
+    border-width: 1px;
+    background-color: white;
+    cursor: pointer;
+  }
+  
+  .button {
+    cursor: pointer;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    width: 5px;
+    background: transparent;
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: transparent;
+  }
+  
+  .arrowLeft {
+    cursor: pointer;
+    position: fixed;
+    top: 50%;
+    left: -25px;
+    transition: left 1s;
+    z-index: 10;
+  }
+  
+  .arrowRight {
+    cursor: pointer;
+    position: fixed;
+    top: 50%;
+    right: 25px;
+    transition: top 1s, right 1s;
+    z-index: 10;
+  }
+  
+  .arrow:hover {
+    border: solid #cccccc;
+    border-width: 0 5px 5px 0;
+  }
+  
+  .arrow {
+    border: solid white;
+    border-width: 0 5px 5px 0;
+    display: inline-block;
+    padding: 5px;
+    width: 25px;
+    height: 25px;
+  }
+  
+  .right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+  
+  .left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+  }
+  
+  .up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+  }
+  
+  .down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+  
+  .goBackBox {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 999;
+    background-color: rgba(255, 0, 0, 0);
+    width: 125px;
+    height: 100vh;
+    cursor: pointer;
+    display: none;
+  }
+  
+  .header {
+    position: fixed;
+    z-index: 2;
+    transition: top 1s, left 1s, width 1s, height 1s;
+  }
+  
+  .headerImage {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    filter: grayscale(100%);
+  }
+
+  .title {
+    z-index: 3;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    transition: top 1s, left 1s, width 1s, height 1s, font-size 1s, color 1s, text-align 1s;
+    padding: 25px;
+    padding-bottom: 0px;
+    color: white;
+    text-transform: uppercase;
+    position: fixed;
+    width: 250px;
+    bottom: 140px;
+    height: 240px;
+    white-space: pre-wrap;
+    font-weight: bold;
+    font-size: 150%;
+    line-height: 140%;
+    text-overflow: ellipsis;
+    background-color: transparent;
+    text-shadow: 2px 2px #0000001f;
+    /* white-space: wrap; */
+  }
+
+  .titleText {
+    margin: 0 auto;
+  }
+
+  .titleWS {
+    z-index: 3;
+    display: block;
+    transition: top 1s, left 1s, width 1s, height 1s, font-size 1s, color 1s;
+    padding: 25px;
+    padding-bottom: 0px;
+    color: red;
+    text-transform: uppercase;
+    position: fixed;
+    width: 250px;
+    bottom: 140px;
+    height: 240px;
+    white-space: pre-wrap;
+    font-weight: bold;
+    font-size: 150%;
+    line-height: 140%;
+    text-overflow: ellipsis;
+    /* white-space: wrap; */
+  }
+  
+  .article {
+    position: fixed;
+    z-index: 2;
+    top: 100vh;
+    left: 125px;
+    width: calc(100vw - 125px);
+    height: 0px;
+    transition: top 1s, left 1s, width 1s, height 1s;
+    background-color: white;
+    /* padding-top: 100px; */
+    background-position: center;
+    background-size: cover;
+    overflow-y: scroll;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }

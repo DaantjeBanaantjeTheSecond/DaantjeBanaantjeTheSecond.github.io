@@ -1,0 +1,65 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Daan Derkx</title>
+    <meta name="description" content="Transitions">
+    <meta name="author" content="Daan Derkx">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="../data/general/favicon.ico" />
+
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/project.css">
+</head>
+
+<body>
+    <header>
+        <h1 onclick="window.location.href = '../index.html';">Daan Derkx</h1>
+        <div class="work" onclick="window.location.href = '../index.html';">work</div>
+        <div class="contact" onclick="window.location.href = '../contact.html';">contact</div>
+        <div class="about" onclick="window.location.href = '../about.html';">about</div>
+        <div class="onlineExposition" onclick="setDarkMode()">dark mode
+        </div>
+    </header>
+    <div class="textContainer">
+
+        <div class="title">Transitions</div>
+
+        <div class="imageContainer">
+            <video preload="auto" loop autoplay controls>
+                <source type="video/mp4" src="../data/transitions/transitions.mp4" />
+            </video>
+        </div>
+        <div class="text">
+            Based on the work “Return to Square”, I was fascinated by the transition between the shape of a square to a
+            silhouette, back to a square. I experimented with a lot of different ways of morphing from one shape to
+            another.<br><br>
+
+            Eventually I came across the movement of a double pendulum. These pendulums can give an extremely different
+            movement with only a slight adjustment in starting position. This made for a great base to use my transition
+            code to.<br><br>
+
+            After a few iterations it ended up in a digital structure that keeps on evolving: growing, schrinking,
+            exploding and collapsing endlessly. Continuously morphing from one shape to the next.
+
+        </div>
+        <div class="imageContainer" style="column-count: 2;">
+            <video preload="auto" loop autoplay controls>
+                <source type="video/mp4" src="../data/transitions/pendulum4.mp4" />
+            </video>
+            <video preload="auto" loop autoplay controls>
+                <source type="video/mp4" src="../data/transitions/pendulum2.mp4" />
+            </video>
+            <img src="../data/transitions/Capture21.PNG">
+        </div>
+    </div>
+</body>
+
+<script src="../java/project.js"></script>
+<script src="../java/main.js"></script>
+
+</html>

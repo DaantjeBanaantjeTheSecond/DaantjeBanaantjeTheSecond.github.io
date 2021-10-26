@@ -1,0 +1,68 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Daan Derkx</title>
+    <meta name="description" content="internet Cafe">
+    <meta name="author" content="Daan Derkx">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="../data/general/favicon.ico" />
+
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/project.css">
+    <link rel="stylesheet" href="../data/internetCafe/style.css">
+</head>
+
+<body>
+    <header>
+        <h1 onclick="window.location.href = '../index.html';">Daan Derkx</h1>
+        <div class="work" onclick="window.location.href = '../index.html';">work</div>
+        <div class="contact" onclick="window.location.href = '../contact.html';">contact</div>
+        <div class="about" onclick="window.location.href = '../about.html';">about</div>
+        <div class="onlineExposition" onclick="setDarkMode()">dark mode
+        </div>
+    </header>
+    <div class="textContainer">
+        <div class="title">Internet Cafe</div>
+        <div class="imageContainer">
+            <img src="../data/internetCafe/displayImg.png">
+        </div>
+        <div class="text">
+            Everybody has his own personal internet experience. Everybody visits different websites and uses different
+            pc’s.<br><br>
+
+            Big corporations like Google, Facebook, Reddit, Twitter, etc. like to keep this as an illusion with their
+            websites. Personal walls, Subscriptions and video’s for every individual user.<br><br>
+
+            All these personal places on the internet are still kind of the same, because of the way these big
+            corporations set up their services.<br><br>
+
+            In this work I try to show you your own personal place on the internet. By musically visualizing the
+            different sites you use and encounter on the internet. In the installation, all the pc’s are together, so
+            that everybody can get a little insight into other users and their corner of the web.<br><br>
+
+            Together, by just browsing your own web, you can make soundscapes together.<br><br>
+
+            The program is a chrome plugin. You can download it <a
+                href="https://github.com/DaantjeBanaantjeTheSecond/Internet-cafe" target="_blank">here</a> or check it out on only this
+            page and the home page
+            by pressing the buttons below.
+
+        </div>
+        <div class="buttonContainer">
+            <div class="text">(Volume Warning!)</div>
+            <button onclick="startInternetCafe()">Run it on this page</button>
+            <button onclick="startInternetCafeHomePage()">Run it on the home page</button>
+        </div>
+
+    </div>
+</body>
+
+<script src="../java/main.js"></script>
+<script src="../data/internetCafe/script.js"></script>
+
+</html>

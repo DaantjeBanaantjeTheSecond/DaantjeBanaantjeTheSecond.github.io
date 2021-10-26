@@ -1,0 +1,128 @@
+:root {
+    --header-font: "Roboto";
+    --text-font: "Roboto";
+    --text-color: white;
+    --text-highlight-color: black;
+    --background-color-a: 255, 0, 0;
+    --background-color-b: 0, 255, 0;
+    --background-color-c: 0, 0, 255;
+}
+
+::-moz-selection {
+    background-color: var(--text-color);
+    color: var(--text-highlight-color);
+}
+
+::selection {
+    background-color: var(--text-color);
+    color: var(--text-highlight-color);
+}
+
+* {
+    color: var(--text-color);
+    font-family: var(--text-font);
+}
+
+::-webkit-scrollbar {
+    width: 3px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--text-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--text-color);
+}
+
+header {
+    position: absolute;
+    z-index: 1;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    display: grid;
+    padding-bottom: 1em;
+    grid-template-areas: 'h1 empty1 work contact about onlineExposition empty2';
+    grid-template-columns: 30% auto repeat(4, 7%) 2%;
+    font-size: 100;
+    font-family: var(--header-font);
+    text-transform: uppercase;
+    text-align: center;
+    background-color: var(--text-highlight-color);
+}
+
+header>* {
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    font-weight: lighter;
+}
+
+header>*:hover {
+    text-decoration: underline;
+    text-decoration-style: solid;
+    cursor: pointer;
+}
+
+h1 {
+    grid-area: h1;
+    font-weight: lighter;
+    font-family: var(--header-font);
+    font-size: 3em;
+}
+
+.work {
+    grid-area: work;
+}
+
+.onlineExposition {
+    grid-area: onlineExposition;
+}
+
+.contact {
+    grid-area: contact;
+}
+
+.about {
+    grid-area: about;
+    display: none;
+}
+
+html {
+    background-color: var(--text-highlight-color);
+}
+
+body {
+
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    margin: 0px;
+    /* background: rgb(18, 18, 18); */
+    /* background: radial-gradient(circle, rgb(31, 31, 31) 0%, rgba(0, 0, 0, 1) 100%); */
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 50% 0,
+            rgba(var(--background-color-a), .5), rgba(var(--background-color-a), 0) 70.71%),
+        radial-gradient(circle at 6.7% 75%,
+            rgba(var(--background-color-b), .5), rgba(var(--background-color-b), 0) 70.71%),
+        radial-gradient(circle at 93.3% 75%,
+            rgba(var(--background-color-c), .5), rgba(var(--background-color-c), 0) 70.71%);
+}
+
+@media (max-width: 1000px) {
+    header {
+        font-size: 1.5em;
+        grid-template-areas:
+            "h1 h1 h1 h1"
+            "work contact about onlineExposition";
+        grid-template-columns: repeat(4, 23%);
+    }
+}
